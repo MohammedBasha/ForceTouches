@@ -75,6 +75,10 @@ Creation date: 30/01/2020 11:01
   font-family: "Fancy Signature";
   src: url("../fonts/fancy-signature/fancy-signature.ttf") format("truetype");
 }
+* {
+  box-sizing: border-box;
+}
+
 a, a:hover {
   text-decoration: none;
   color: inherit;
@@ -123,6 +127,10 @@ body {
   flex-direction: column;
   overflow: hidden;
   max-height: 0;
+  -webkit-transition: max-height 0.3s ease-in-out;
+  -moz-transition: max-height 0.3s ease-in-out;
+  -ms-transition: max-height 0.3s ease-in-out;
+  -o-transition: max-height 0.3s ease-in-out;
   transition: max-height 0.3s ease-in-out;
 }
 .socials-links a {
@@ -148,6 +156,10 @@ body {
   flex-basis: 100%;
   margin: 25px 0;
 }
+.menu-wrapper .inactive {
+  opacity: 0;
+  visibility: hidden;
+}
 .menu-wrapper i {
   font-family: "Roboto";
   cursor: pointer;
@@ -158,10 +170,62 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  visibility: hidden;
   z-index: 1;
+  -webkit-transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+  -ms-transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
   width: 100%;
   height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 35px 143px;
+}
+.menu-wrapper nav > ul {
+  margin-top: 100px;
+  font-family: "Roboto";
+  font-weight: bold;
+  position: relative;
+  width: 200px;
+}
+.menu-wrapper nav > ul ul {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  border-left: 1px solid #acb3ba;
+  width: 150px;
+  height: 100%;
+  padding-left: 50px;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -ms-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+}
+.menu-wrapper nav > ul ul a {
+  font-size: 1.2em;
+}
+.menu-wrapper nav li {
+  margin-bottom: 35px;
+}
+.menu-wrapper nav li:last-child {
+  margin-bottom: 0;
+}
+.menu-wrapper nav li:hover ul {
+  opacity: 1;
+}
+.menu-wrapper nav a {
+  color: #acb3ba;
+  font-size: 1.5em;
+  -webkit-transition: box-shadow 0.3s ease-in-out;
+  -moz-transition: box-shadow 0.3s ease-in-out;
+  -ms-transition: box-shadow 0.3s ease-in-out;
+  -o-transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out;
+}
+.menu-wrapper nav a:hover {
+  box-shadow: 0px 8px 6px -6px rgba(255, 255, 255, 0.6);
 }
 
 .homepage-subcontent {
@@ -202,6 +266,14 @@ body {
   flex-wrap: wrap;
   margin-right: 50px;
   font-family: "Roboto";
+  -webkit-transition: color 0.3s ease-in-out;
+  -moz-transition: color 0.3s ease-in-out;
+  -ms-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+.downloads-wrapper a:hover {
+  color: #acb3ba;
 }
 .downloads-wrapper a:first-child {
   margin-left: 35px;
