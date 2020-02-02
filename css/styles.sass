@@ -1,6 +1,186 @@
+// Import the Flat Icon library
+
 @import flaticon
 
-.downloads-wrapper
+// Import Fonts
+
+@font-face
+  font-family: "Roboto"
+  src: url("../fonts/roboto/roboto-regular.ttf") format("truetype")
+
+@font-face
+  font-family: "Roboto Light"
+  src: url("../fonts/roboto/roboto-light.ttf") format("truetype")
+
+@font-face
+  font-family: "Fancy Signature"
+  src: url("../fonts/fancy-signature/fancy-signature.ttf") format("truetype")
+
+// The Basic Styles
+
+$light-color: #acb3ba
+$dark-color: #868c92
+
+a, a:hover
+    text-decoration: none
+    color: inherit
+
+ul
+    list-style: none
+    margin: 0
+    padding: 0
+
+%text-uppercase
+    text-transform: uppercase
+
+body
+    background-image: url(../images/background.png)
+    background-size: cover
+
+// Home Page Wrapper Styles
+
+.homepage-wrapper
+    display: flex
+    
+    aside
+        display: flex
+        flex-basis: 10%
+        flex-direction: column-reverse
+
+.socials-wrapper
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin-bottom: 55%
+
+    > i
+        color: $dark-color
+        cursor: pointer
+    
+    &:hover
+        .socials-links
+            max-height: 140px
+
+.socials-links
+    display: flex
+    flex-direction: column
+    overflow: hidden
+    max-height: 0
+    transition: max-height .3s ease-in-out
+
     a
+        &:first-child
+            margin-top: 15px
+        
+        color: $light-color
+        font-size: 1.4em
+        margin-bottom: 15px
+
+.homepage-content
+    display: flex
+    flex-wrap: wrap
+    flex-basis: 90%
+    justify-content: space-between
+
+    img
+        margin-right: 10%
+
+// Menu Styles
+
+.menu-wrapper
+    flex-basis: 100%
+    margin: 25px 0
+
+    i
+        font-family: "Roboto"
+        cursor: pointer
+        color: $light-color
+        font-size: 1.5em
+
+    nav
+        position: absolute
+        top: 0
+        left: 0
+        visibility: hidden
+        z-index: 1
+        width: 100%
+        height: 100%
+
+// Home Page Content Styles
+
+.homepage-subcontent
+    flex-basis: 40%
+
+    h1
+        @extend %text-uppercase
+        font-family: "Roboto Light"
+        color: $light-color
+        font-size: 5em
+        margin-bottom: 0
+
+    h3
+        @extend %text-uppercase
+        font-family: "Roboto Light"
+        color: $light-color
+        font-size: 2.4em
+        margin-top: 0
+
+    p
+        font-family: "Roboto Light"
+        margin: 30px 0
+        font-size: 1.2em
+        color: $light-color
+    
+    footer
+        color: $dark-color
+        font-family: "Fancy Signature"
+        font-size: 2em
+        
+
+// Downloads Wrapper Styles
+
+.downloads-wrapper
+    margin-bottom: 50px
+    display: flex
+
+    a
+        @extend %text-uppercase
+        color: $dark-color
+        position: relative
+        display: flex
+        flex-wrap: wrap
+        margin-right: 50px
+        font-family: "Roboto"
+
+        &:first-child
+            margin-left: 35px
+
+        &:last-child
+            margin-right: 0
+
+            span
+                &:last-child
+                    margin-right: 0
+                    font-size: .8em
+
         &::before
             @extend .fi, .flaticon-download
+            color: $light-color
+            position: absolute
+            left: -35px
+            top: 4px
+            color: $light-color
+            font-size: 1.4em
+
+        span
+            font-size: .8em
+            margin-right: 35px
+
+            &:first-child
+                flex-basis: 100%
+                margin-right: 0
+                font-size: 1em
+            
+            &:last-child
+                margin-right: 0
+                font-size: .7em

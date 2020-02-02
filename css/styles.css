@@ -5,15 +5,15 @@ Creation date: 30/01/2020 11:01
 */
 @font-face {
   font-family: "Flaticon";
-  src: url("../fonts/flaticon.eot");
-  src: url("../fonts/flaticon.eot?#iefix") format("embedded-opentype"), url("../fonts/flaticon.woff2") format("woff2"), url("../fonts/flaticon.woff") format("woff"), url("../fonts/flaticon.ttf") format("truetype"), url("../fonts/flaticon.svg#flaticon") format("svg");
+  src: url("../fonts/flaticon/flaticon.eot");
+  src: url("../fonts/flaticon/flaticon.eot?#iefix") format("embedded-opentype"), url("../fonts/flaticon/flaticon.woff2") format("woff2"), url("../fonts/flaticon/flaticon.woff") format("woff"), url("../fonts/flaticon/flaticon.ttf") format("truetype"), url("../fonts/flaticon/flaticon.svg#flaticon") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   @font-face {
     font-family: "Flaticon";
-    src: url("../fonts/flaticon.svg#flaticon") format("svg");
+    src: url("../fonts/flaticon/flaticon.svg#flaticon") format("svg");
   }
 }
 .fi:before, .downloads-wrapper a:before {
@@ -61,6 +61,178 @@ Creation date: 30/01/2020 11:01
 
 .flaticon-menu:before {
   content: "";
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/roboto/roboto-regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto Light";
+  src: url("../fonts/roboto/roboto-light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Fancy Signature";
+  src: url("../fonts/fancy-signature/fancy-signature.ttf") format("truetype");
+}
+a, a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.downloads-wrapper a, .homepage-subcontent h3, .homepage-subcontent h1 {
+  text-transform: uppercase;
+}
+
+body {
+  background-image: url(../images/background.png);
+  background-size: cover;
+}
+
+.homepage-wrapper {
+  display: flex;
+}
+.homepage-wrapper aside {
+  display: flex;
+  flex-basis: 10%;
+  flex-direction: column-reverse;
+}
+
+.socials-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 55%;
+}
+.socials-wrapper > i {
+  color: #868c92;
+  cursor: pointer;
+}
+.socials-wrapper:hover .socials-links {
+  max-height: 140px;
+}
+
+.socials-links {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease-in-out;
+}
+.socials-links a {
+  color: #acb3ba;
+  font-size: 1.4em;
+  margin-bottom: 15px;
+}
+.socials-links a:first-child {
+  margin-top: 15px;
+}
+
+.homepage-content {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 90%;
+  justify-content: space-between;
+}
+.homepage-content img {
+  margin-right: 10%;
+}
+
+.menu-wrapper {
+  flex-basis: 100%;
+  margin: 25px 0;
+}
+.menu-wrapper i {
+  font-family: "Roboto";
+  cursor: pointer;
+  color: #acb3ba;
+  font-size: 1.5em;
+}
+.menu-wrapper nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.homepage-subcontent {
+  flex-basis: 40%;
+}
+.homepage-subcontent h1 {
+  font-family: "Roboto Light";
+  color: #acb3ba;
+  font-size: 5em;
+  margin-bottom: 0;
+}
+.homepage-subcontent h3 {
+  font-family: "Roboto Light";
+  color: #acb3ba;
+  font-size: 2.4em;
+  margin-top: 0;
+}
+.homepage-subcontent p {
+  font-family: "Roboto Light";
+  margin: 30px 0;
+  font-size: 1.2em;
+  color: #acb3ba;
+}
+.homepage-subcontent footer {
+  color: #868c92;
+  font-family: "Fancy Signature";
+  font-size: 2em;
+}
+
+.downloads-wrapper {
+  margin-bottom: 50px;
+  display: flex;
+}
+.downloads-wrapper a {
+  color: #868c92;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 50px;
+  font-family: "Roboto";
+}
+.downloads-wrapper a:first-child {
+  margin-left: 35px;
+}
+.downloads-wrapper a:last-child {
+  margin-right: 0;
+}
+.downloads-wrapper a:last-child span:last-child {
+  margin-right: 0;
+  font-size: 0.8em;
+}
+.downloads-wrapper a::before {
+  color: #acb3ba;
+  position: absolute;
+  left: -35px;
+  top: 4px;
+  color: #acb3ba;
+  font-size: 1.4em;
+}
+.downloads-wrapper a span {
+  font-size: 0.8em;
+  margin-right: 35px;
+}
+.downloads-wrapper a span:first-child {
+  flex-basis: 100%;
+  margin-right: 0;
+  font-size: 1em;
+}
+.downloads-wrapper a span:last-child {
+  margin-right: 0;
+  font-size: 0.7em;
 }
 
 /*# sourceMappingURL=styles.css.map */
